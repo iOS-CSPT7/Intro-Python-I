@@ -51,8 +51,19 @@ print(waypoints[0])
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
 
-loop = [val['name'] for val in waypoints]  
-print(loop) 
+
 
 for val in waypoints: 
     print(val['lon'], val['lat'], val['name'])
+
+
+for wp in waypoints:
+    string = ''
+    for key in wp:
+        string += ' ' + str( wp[key] )
+    print(string)
+
+
+# loop = [val['name'] for val in waypoints]  
+loop = [ wp[key] for wp in waypoints for key in wp ]
+print(loop) 
