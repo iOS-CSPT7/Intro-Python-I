@@ -57,6 +57,9 @@ elif l == 3:
 else: 
     print("usage: filename month year")
     sys.exit(1)
+
+
+#how do we test the different arguments? 
 #     month = None
 #     year = int(sys.argv[1])
 # elif l == 3:
