@@ -67,3 +67,46 @@ for wp in waypoints:
 # loop = [val['name'] for val in waypoints]  
 loop = [ wp[key] for wp in waypoints for key in wp ]
 print(loop) 
+
+
+my_dict = {
+    "lat": 43,
+    "lon": -121,
+    "name": "a place"
+}
+
+print([my_dict[key] for key in my_dict])
+
+
+
+waypointsnested = [
+    [{
+        "lat": 43,
+        "lon": -121,
+        "name": "a place"
+    },
+    {
+        "lat": 41,
+        "lon": -123,
+        "name": "another place"
+    }
+    ],
+     [{
+        "lat": 43,
+        "lon": -121,
+        "name": "a place"
+    },
+    {
+        "lat": 41,
+        "lon": -123,
+        "name": "another place"
+    }
+    ]
+]
+
+for inner_list in waypointsnested:
+    for waypoint in inner_list:
+        for key in waypoint:
+            waypoint[key]
+
+print([waypoint[key] for inner_list in waypointsnested for waypoint in inner_list for key in waypoint])

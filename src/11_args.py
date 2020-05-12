@@ -74,3 +74,15 @@ d = {
 
 # How do you have to modify the f4 call below to make this work?
 f4(**d)
+
+def f5(a, b , c, *args, **kwargs):
+    print(a, b, c)
+    print(args)
+    print(kwargs)
+
+f5(1,2,3,4,5, x=6, y=7)
+
+def f6(**kwds):
+    print(kwds)
+
+f6(a=1, b =2)
